@@ -42,7 +42,7 @@ const App = () => {
               alert(
                 "Location access is required for navigation. Please enable location services or enter your location manually."
               );
-              // Optionally, set a default location
+              //  default location
               const defaultCoords = [51.541574, 9.951122]; // Example default location
               setCenter(defaultCoords);
               setUserLocation(defaultCoords);

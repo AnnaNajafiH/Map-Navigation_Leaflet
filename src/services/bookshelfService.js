@@ -1,4 +1,3 @@
-// src/services/bookshelfService.js
 
 export const fetchBookshelves = async () => {
   try {
