@@ -4,7 +4,7 @@ import { fetchBookshelves } from "./services/bookshelfService";
 
 const App = () => {
   const [bookshelves, setBookshelves] = useState([]);
-  const [center, setCenter] = useState([51.541574, 9.951122]); // Default center
+  const [center, setCenter] = useState([51.5326, 9.92844]); // Default center
   const [userLocation, setUserLocation] = useState(null);
   const [destination, setDestination] = useState(null);
   const [loadingLocation, setLoadingLocation] = useState(true);
@@ -38,7 +38,7 @@ const App = () => {
               alert(
                 "Location access is required for navigation. Please enable location services or enter your location manually."
               );
-              setCenter([51.541574, 9.951122]); // Default location
+              setCenter([51.5326, 9.92844]); // Default location
               setUserLocation([51.541574, 9.951122]);
             } else {
               console.error("Error getting user location: ", error);
