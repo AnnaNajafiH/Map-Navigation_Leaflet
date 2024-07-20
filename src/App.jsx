@@ -67,7 +67,7 @@ const App = () => {
           (error) => {
             if (error.code === error.PERMISSION_DENIED) {
               console.error("User denied Geolocation");
-              const defaultCoords = [51.541574, 9.951122];
+              // const defaultCoords = [51.541574, 9.951122];  if we want to set default location
               setCenter(defaultCoords);
               setUserLocation(defaultCoords);
               setLoadingLocation(false);
