@@ -1,7 +1,8 @@
-// src/components/LayoutComponent.jsx
 import React, { useState } from "react";
 import MapComponent from "./MapComponent";
 import "./LayoutComponent.css";
+import SearchComponent from "./SearchComponent";
+
 
 const LayoutComponent = ({
   bookshelves,
@@ -11,12 +12,17 @@ const LayoutComponent = ({
   setDestination,
 }) => {
   const [showMore, setShowMore] = useState(false);
+  const [filteredBookshelves, setFilteredBookshelves] = useState(bookshelves);
 
   const displayedBookshelves = showMore ? bookshelves : bookshelves.slice(0, 3);
 
   return (
     <div className="container">
       <div className="bookshelf-list">
+        <SearchComponent
+          bookshelves={bookshelves}
+          setFilteredBookshelves={setFilteredBookshelves}
+        />
         {displayedBookshelves.map((shelf, idx) => (
           <div key={idx} className="bookshelf">
             <h3>{shelf.name}</h3>
@@ -32,6 +38,7 @@ const LayoutComponent = ({
           </button>
         )}
       </div>
+
       <div className="map-container">
         <MapComponent
           bookshelves={bookshelves}

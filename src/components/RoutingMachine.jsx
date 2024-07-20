@@ -16,7 +16,7 @@ const RoutingMachine = ({ start, end }) => {
       routeWhileDragging: true,
       createMarker: () => null, // Do not create default markers
       lineOptions: {
-        styles: [{ color: "red", weight: 4 }],
+        styles: [{ color: "green", weight: 4 }],
       },
       show: false, // Do not show the itinerary
       addWaypoints: false, // Do not allow adding waypoints
