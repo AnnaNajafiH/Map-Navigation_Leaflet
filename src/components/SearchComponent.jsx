@@ -17,14 +17,14 @@ const SearchComponent = ({ bookshelves, setFilteredBookshelves }) => {
   };
 
   return (
-    <div style={{ padding: "10px" }}>
+    <div style={{ padding: "20px" }}>
       <input
         type="text"
         value={query}
         onChange={handleSearch}
         placeholder="Search by bookshelf name or city..."
         style={{
-          width: "100%",
+          width: "90%",
           padding: "10px",
           borderRadius: "5px",
           border: "1px solid #ccc",
